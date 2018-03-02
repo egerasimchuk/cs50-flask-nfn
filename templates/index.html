@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    {% if news %}
+        {% for title in news %}
+            {{ title }}<br>
+        {% endfor %}
+        <a href="/news/create">Add one more</a>
+    {% else %}
+        There are no news here. <br>
+        <a href="/news/create">Be first to add one</a>
+    {% endif %}
+
+{% endblock %}
